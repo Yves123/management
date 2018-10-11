@@ -1,0 +1,123 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app{
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus{
+  outline: none;
+ }
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+//main-container全局样式
+.app-main{
+  min-height: 100%;
+}
+
+.app-container {
+  padding: 20px;
+}
+
+.pagination {
+  float: right;
+  margin-top: 20px;
+}
+
+// 设置全局公用样式
+$index_size: 10px;
+$boder_color: #ddd;
+$bg_color: #fff;
+
+@for $i from 1 through 4 {
+  .pt-#{$i} { padding-top: $index_size * $i; }
+  .pb-#{$i} { padding-bottom: $index_size * $i; }
+  .pl-#{$i} { padding-left: $index_size * $i; }
+  .pr-#{$i} { padding-right: $index_size * $i; }
+  .mt-#{$i} { margin-top: $index_size * $i; }
+  .ml-#{$i} { margin-left: $index_size * $i; }
+  .mr-#{$i} { margin-right: $index_size * $i; }
+  .mb-#{$i} { margin-bottom: $index_size * $i; }
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.borderTop {
+  border-top: 1px solid $boder_color;
+}
+
+.borderBtm {
+  border-bottom: 1px solid $boder_color;
+}
+
+.bg {
+  background-color: $bg_color;
+}
+
+.cursor {
+  cursor: pointer;
+}
